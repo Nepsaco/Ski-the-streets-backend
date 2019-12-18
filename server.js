@@ -21,10 +21,6 @@ app.get('/mountains', (request, response) => {
         .then(mountains => response.send(mountains))
 })
 
-app.get('/', (request, response) => {
-    response.send({key: process.env.API_KEY})
-})
-
 app.post('/favorites', (request, response) => {
     queries.createFavorite(request.body)
         .then(favorite => response.json(favorite))

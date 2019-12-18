@@ -2,14 +2,14 @@
 
 module.exports = {
 
-  development: {
-    client: 'pg',
-    connection: 'postgresql://localhost/ski_app'
-  },
+    development: {
+        client: 'pg',
+        connection: 'postgresql://localhost/ski_app'
+    },
 
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL,
-  }
+    production: {
+        client: 'pg',
+        connection: process.env.DATABASE_URL
+    }
 
 };
