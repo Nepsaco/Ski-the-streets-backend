@@ -26,4 +26,6 @@ app.post('/favorites', (request, response) => {
         .then(favorite => response.json(favorite))
 })
 
-
+app.get('/token', (request, response) => {
+    response.send({key: process.env.API_KEY})
+})
